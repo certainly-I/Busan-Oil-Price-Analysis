@@ -44,7 +44,7 @@ class qTemplate(QWidget):
     def btnSaveClicked(self) -> None:
         if len(self.saveResult) > 0:
             df = pd.DataFrame(self.saveResult)
-            df.to_csv(f'./pyqt03/{self.txtSearch.text()}_뉴스검색결과.csv', encoding='utf-8', index=True)
+            df.to_csv(f'./data/{self.txtSearch.text()}_뉴스검색결과.csv', encoding='utf-8', index=True)
         
         QMessageBox.information(self, '저장', '저장완료!')
         # 저장 후 모든 변수 초기화(초기화를 잘해줘야.. 안하면 다 섞임)
