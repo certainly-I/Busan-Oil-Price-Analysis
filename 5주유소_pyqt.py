@@ -141,7 +141,8 @@ class qTemplate(QWidget):
     #네이버 API 크롤링 함수
     def getNaverSearch(self, keyword, search, start, display): # 돌려주는 값 json
         url = f'https://openapi.naver.com/v1/search/{keyword}.json' \
-              f'?query={quote(search)}&start={start}&display={display}'
+              f'?query={quote(search)}&start={start}&display={display}&sort=sim'
+              
         print(url)
         req = urllib.request.Request(url)
         # 네이버 인증 추가
